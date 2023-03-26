@@ -7,6 +7,11 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
+import {Categorias} from "./views/categorias";
+import {RickSanchez} from "./views/ricksanchez";
+import {PickleRick} from "./views/picklerick";
+import {MrPoopybutthole} from "./views/mrpoopybutthole";
+
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -26,6 +31,11 @@ const Layout = () => {
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
+
+						<Route path="/categorias" element={<Categorias />} />
+						<Route path="/ricksanchez" element={<RickSanchez />} />
+						<Route path="/picklerick" element={<PickleRick />} />
+						<Route path="/mrpoopybutthole" element={<MrPoopybutthole />} />
 					</Routes>
 					<Footer />
 				</ScrollToTop>
