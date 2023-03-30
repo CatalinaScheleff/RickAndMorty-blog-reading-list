@@ -15,10 +15,10 @@ export const Home = () => (
 		</div>
 		</div>
 		<Link to="/personajes">
-		<button className = "btn btn-dark m-5">Personajes</button>
+		<button className = "btn btn-dark btn-lg m-5">Personajes</button>
 		</Link>
 		<Link to="/locations">
-		<button className = "btn btn-dark m-5">Locaciones</button>
+		<button className = "btn btn-dark btn-lg m-5">Locaciones</button>
 		</Link>
 	</div>
 );

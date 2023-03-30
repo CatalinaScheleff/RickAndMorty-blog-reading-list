@@ -4,10 +4,12 @@ import {CardPersonajes} from "../component/card"
 
 export const Personajes = () => (
 	<div className="container">
-		<h1>Personajes</h1>
-		<div className="container">
-		<div className="row">
+		<div className="divTitulo border rounded-pill my-5">
+		<h1 className="titulo m-3">Personajes</h1>
+		</div>
+		
+		<div>
 		<CardPersonajes/>
 		</div>
-		</div>
+		
 	</div>)

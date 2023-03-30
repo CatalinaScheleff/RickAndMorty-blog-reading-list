@@ -11,7 +11,7 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: black;
-  
+  display: inline-block;
   position: fixed;
 }
 
@@ -21,4 +21,14 @@ nav {
 
 .navImage {
 width: 150px
+}
+
+.titulo {
+    color: white;
+    text-align: center;
+}
+
+.divTitulo {
+    background-color: rgba(0, 0, 0, .5);
+    width: 280px;
 }

@@ -13,10 +13,10 @@ export const CardPersonajes = () => {
     }, []);
 
     return (
-        <div className="container-fluid col">
+        <div className="container-fluid row">
             
             {characters.map((character)=>(
-                <div className="card" style={{ width: "18rem" }} key={character.id}>
+                <div className="card col-3 m-2" style={{ width: "18rem" }} key={character.id}>
                     <img src={character.image} className="card-img-top" alt={character.name}/>
                     <div className="card-body">
                     <h5 className="card-title">{character.name}</h5>
@@ -44,10 +44,10 @@ export const CardLocations = () => {
     }, []);
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid row">
             
             {locations.map((location)=>(
-                <div className="card" style={{ width: "18rem" }} key={location.id}>
+                <div className="card col-3 m-2" style={{ width: "18rem" }} key={location.id}>
                     <img src={planeta} className="card-img-top" alt={location.name}/>
                     <div className="card-body">
                     <h5 className="card-title">{location.name}</h5>
