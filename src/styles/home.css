@@ -1,0 +1,24 @@
+body {
+    background-image: url("https://poptv.orange.es/wp-content/uploads/sites/3/2018/03/Rick-and-Morty-3p-1100x619.jpg");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-color: black;
+   }
+
+.blog {
+    color: white;
+    margin-bottom: 30px
+}
+.fondoblog {
+    
+    background-color: rgba(0, 0, 0, .5);
+    width: 480px;
+    height: 50px;
+    margin: 20px; 
+} 
+.divImage {
+    justify-content: center;
+    display: flex;
+}
+

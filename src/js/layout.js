@@ -8,9 +8,9 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import {Categorias} from "./views/categorias";
-import {RickSanchez} from "./views/ricksanchez";
-import {PickleRick} from "./views/picklerick";
-import {MrPoopybutthole} from "./views/mrpoopybutthole";
+import {Personajes} from "./views/personajes";
+import {Locations} from "./views/locations";
+
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -33,9 +33,9 @@ const Layout = () => {
 						<Route path="*" element={<h1>Not found!</h1>} />
 
 						<Route path="/categorias" element={<Categorias />} />
-						<Route path="/ricksanchez" element={<RickSanchez />} />
-						<Route path="/picklerick" element={<PickleRick />} />
-						<Route path="/mrpoopybutthole" element={<MrPoopybutthole />} />
+						<Route path="/personajes" element={<Personajes />} />
+						<Route path="/locations" element={<Locations />} />
+
 					</Routes>
 					<Footer />
 				</ScrollToTop>
