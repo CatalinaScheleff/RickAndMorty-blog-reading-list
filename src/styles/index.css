@@ -32,3 +32,11 @@ width: 150px
     background-color: rgba(0, 0, 0, .5);
     width: 280px;
 }
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.contenido {
+    padding-bottom: 100px
+}

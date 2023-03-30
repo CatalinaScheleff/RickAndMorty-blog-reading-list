@@ -13,7 +13,7 @@ export const CardPersonajes = () => {
     }, []);
 
     return (
-        <div className="container-fluid row">
+        <div className="container-fluid row justify-content-center d-flex">
             
             {characters.map((character)=>(
                 <div className="card col-3 m-2" style={{ width: "18rem" }} key={character.id}>
@@ -21,7 +21,7 @@ export const CardPersonajes = () => {
                     <div className="card-body">
                     <h5 className="card-title">{character.name}</h5>
                     <p className="card-text">{character.species}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <a href="/detalle/:name" className="btn btn-dark">Go somewhere</a>
                     </div>
 
                 </div>
@@ -44,7 +44,7 @@ export const CardLocations = () => {
     }, []);
 
     return (
-        <div className="container-fluid row">
+        <div className="container-fluid row justify-content-center d-flex">
             
             {locations.map((location)=>(
                 <div className="card col-3 m-2" style={{ width: "18rem" }} key={location.id}>
@@ -53,7 +53,7 @@ export const CardLocations = () => {
                     <h5 className="card-title">{location.name}</h5>
                     <p className="card-text">{location.type}</p>
                     <p className="card-text">{location.dimension}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <a href="#" className="btn btn-dark">Go somewhere</a>
                     </div>
 
                 </div>
