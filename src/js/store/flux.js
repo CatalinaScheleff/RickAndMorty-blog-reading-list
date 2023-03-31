@@ -1,6 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			  character:{},
+			  location:{},
 			demo: [
 				{
 					title: "FIRST",
@@ -23,7 +25,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+				fetch("https://rickandmortyapi.com/api/character")
+			    .then(response=>response.json())
+				.then(data=>{
+					console.log(data);
+					setStore({character: data})
+					//setStore es una función que modifica store, un elemento del objeto y tengo que indicar cual
+				})
+				.catch(error=>console.log(error));
+
+
+				fetch("https://rickandmortyapi.com/api/location")
+			    .then(response=>response.json())
+				.then(data=>{
+					console.log(data);
+					setStore({location: data})
+					//setStore es una función que modifica store, un elemento del objeto y tengo que indicar cual
+				})
+				.catch(error=>console.log(error));
 			},
+
+
+			
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
