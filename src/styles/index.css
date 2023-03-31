@@ -40,3 +40,8 @@ width: 150px
 .contenido {
     padding-bottom: 100px
 }
+
+.tarjeta {
+    max-width: 1000px;
+}
+

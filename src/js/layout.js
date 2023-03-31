@@ -10,7 +10,8 @@ import injectContext from "./store/appContext";
 import { Home } from "./views/home";
 import {Personajes} from "./views/personajes";
 import {Locations} from "./views/locations";
-import { Detalle } from "./views/detalle";
+import { DetallePersonaje } from "./views/detallePersonaje";
+import { DetalleLocacion } from "./views/detalleLocacion";
 
 
 import { Navbar } from "./component/navbar";
@@ -31,7 +32,8 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
-						<Route path="/detalle/:nombre"element={<Detalle/>}/>
+						<Route path="/personaje/detalle/:name"element={<DetallePersonaje/>}/>
+						<Route path="/locacion/detalle/:id"element={<DetalleLocacion/>}/>
 						<Route path="*" element={<h1>Not found!</h1>} />
 
 						<Route path="/personajes" element={<Personajes />} />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import planeta from "../../img/planeta.webp";
+import { Link } from "react-router-dom";
 
 export const CardPersonajes = () => {
     const url = "https://rickandmortyapi.com/api/character/";
@@ -15,13 +16,15 @@ export const CardPersonajes = () => {
     return (
         <div className="container-fluid row justify-content-center d-flex">
             
-            {characters.map((character)=>(
+            {characters.map((character,index)=>(
                 <div className="card col-3 m-2" style={{ width: "18rem" }} key={character.id}>
                     <img src={character.image} className="card-img-top" alt={character.name}/>
                     <div className="card-body">
                     <h5 className="card-title">{character.name}</h5>
                     <p className="card-text">{character.species}</p>
-                    <a href="/detalle/:name" className="btn btn-dark">Go somewhere</a>
+                    <Link to={"/personaje/detalle/"+character.name}>
+                    <button className="btn btn-dark">Más información</button>
+                    </Link>
                     </div>
 
                 </div>
@@ -53,7 +56,9 @@ export const CardLocations = () => {
                     <h5 className="card-title">{location.name}</h5>
                     <p className="card-text">{location.type}</p>
                     <p className="card-text">{location.dimension}</p>
-                    <a href="#" className="btn btn-dark">Go somewhere</a>
+                    <Link to={"/locacion/detalle/"+location.id}>
+                    <button className="btn btn-dark">Más información</button>
+                    </Link>
                     </div>
 
                 </div>
