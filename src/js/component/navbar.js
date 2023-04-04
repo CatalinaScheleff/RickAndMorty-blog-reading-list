@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/logo.jpg"
 import nav from "../../img/nav.jpg"
-
+import { Favoritos } from "./dropdown";
 
 export const Navbar = () => {
 	return (
@@ -14,10 +14,9 @@ export const Navbar = () => {
 					</span>
 			</Link>
 			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-lg btn-outline-info m-4">
-						Favoritos</button>
-				</Link>
+		
+					<Favoritos/>
+				
 			</div>
 		</nav>
 	);

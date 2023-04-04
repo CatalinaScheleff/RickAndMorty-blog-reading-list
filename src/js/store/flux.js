@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			favoritos:{},
 			  character:{},
 			  location:{},
 			demo: [
@@ -43,6 +44,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					//setStore es una función que modifica store, un elemento del objeto y tengo que indicar cual
 				})
 				.catch(error=>console.log(error));
+			},
+
+			agregarFavorito: (name) => {
+				console.log(name);
+				const store = getStore();
+				const favoritos = Array.isArray(store.favoritos) ? [...store.favoritos, name] : [name];
+				if (name = "") {
+				setStore({ favoritos });
+				}
 			},
 
 

@@ -25,9 +25,11 @@ return ( <div>
   </div>
   <div className="col-md-8">
     <div className="card-body">
-      <h5 className="card-title">{tarjetaPersonaje.name} </h5>
+      <h1 className="card-title">{tarjetaPersonaje.name} </h1>
       <p className="card-text">Especie: {tarjetaPersonaje.species}</p>
       <p className="card-text">Estado: {tarjetaPersonaje.status}</p>
+      <p className="card-text">Origen: {tarjetaPersonaje.origin?.name}</p>
+      <p className="card-text">Ubicación actual: {tarjetaPersonaje.location?.name}</p>
     </div>
   </div>
 </div>
@@ -64,7 +66,9 @@ return ( <div>
   </div>
   <div className="col-md-8">
     <div className="card-body">
-      <h5 className="card-title">{tarjetaLocacion.name} </h5>
+      <h1 className="card-title">{tarjetaLocacion.name} </h1>
+      <br></br>
+      <p className="card-text">Nombre: {tarjetaLocacion.name}</p>
       <p className="card-text">Tipo: {tarjetaLocacion.type}</p>
       <p className="card-text">Dimensión: {tarjetaLocacion.dimension}</p>
     </div>
