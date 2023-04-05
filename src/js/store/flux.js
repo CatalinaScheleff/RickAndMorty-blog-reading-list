@@ -46,15 +46,18 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
 
-	  agregarFavorito: (name) => {
-       
+      agregarFavorito: (name) => {
+        console.log(name);
         const store = getStore();
         const favoritos = Array.isArray(store.favoritos)
-          ? [...store.favoritos, name]
-          : [name];
-          setStore({ favoritos });
-		  console.log(favoritos);
+          ? [...store.favoritos]
+          : [];
+        if (name !== "" && !favoritos.includes(name)) {
+          favoritos.push(name);
+        }
+        setStore({ favoritos });
       },
+      
 
 	  eliminarFavorito: (index) => {
 		const store = getStore();
