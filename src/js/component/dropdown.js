@@ -19,7 +19,8 @@ export const Favoritos = () => {
           {Array.isArray(store.favoritos) && store.favoritos.map((name,index) => {
             return  <div key={index} className="justify-content-center d-flex">
             <li className="dropdown-item" >{name}</li>
-            <div className="btn btn-light btn-sm">X</div>
+            <div className="btn btn-light btn-sm"
+            onClick={() => actions.eliminarFavorito(index)}>X</div>
           </div>
           })}
         </ul>

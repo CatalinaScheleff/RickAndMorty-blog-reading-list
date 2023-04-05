@@ -45,13 +45,24 @@ const getState = ({ getStore, getActions, setStore }) => {
           .catch((error) => console.log(error));
       },
 
-      agregarFavorito: (name) => {
-        console.log(name);
-        const store = getStore();
-        const favoritos = Array.isArray(store.favoritos) ? [...store.favoritos, name]  : [name];
+
+	  agregarFavorito: (name) => {
        
+        const store = getStore();
+        const favoritos = Array.isArray(store.favoritos)
+          ? [...store.favoritos, name]
+          : [name];
           setStore({ favoritos });
+		  console.log(favoritos);
       },
+
+	  eliminarFavorito: (index) => {
+		const store = getStore();
+		const filtrado = store.favoritos.filter((fav,currentIndex) => index !== currentIndex)
+		setStore ({favoritos: filtrado})
+		console.log (filtrado)
+	  },
+	  
 
       changeColor: (index, color) => {
         //get the store
