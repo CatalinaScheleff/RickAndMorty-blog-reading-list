@@ -16,16 +16,14 @@ export const Favoritos = () => {
         >Favoritos
         </button>
         <ul className="dropdown-menu dropdown-menu-end me-4">
-        {store.favoritos.lenght === 0 && (
-            <li className="dropdown-item">(Vacío)</li>
-          )}
-          {Array.isArray(store.favoritos) && store.favoritos.map((name,index) => {
+        {store.favoritos.length > 0 ? (Array.isArray(store.favoritos) && store.favoritos.map((name,index) => {
             return  <div key={index} className="justify-content-center d-flex">
             <li className="dropdown-item">{name}</li>
             <div className="btn btn-light btn-sm"
             onClick={() => actions.eliminarFavorito(index)}>X</div>
           </div>
-          })}
+          })
+          ):<li className="dropdown-item">(Vacío)</li>}
         </ul>
       </div>
     </div>
